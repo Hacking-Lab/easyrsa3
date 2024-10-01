@@ -20,7 +20,7 @@ CERT_COMMONNAME="covenant.${FQDN}"
 ./easyrsa --batch sign-req server ${CERT_FILENAME}
 
 
-# create full cain.pem
+# create full chain.pem
 cat ./pki/ca.crt > ./pki/issued/covenant-fullchain.crt
 cat ./pki/issued/covenant.hacking-lab.local.crt >> ./pki/issued/covenant-fullchain.crt
 
